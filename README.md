@@ -11,10 +11,11 @@ Locally (no ROS)
 bash run.sh path/to/video10.mp4
 ```
 
-Under ROS 2: builds, launches the two nodes plus a viewer window:
+Under ROS 2 — build once, then run any time (launches the two nodes plus a viewer window):
 
 ```bash
-bash setup.sh video10.mp4
+bash setup.sh                    # once: installs ROS 2 + deps if missing, builds the package
+bash launch.sh video10.mp4       # each run
 ```
 
 For the 3D numbers, in another terminal:
@@ -30,7 +31,8 @@ source ~/ros2_ws/install/setup.bash && ros2 topic echo /centers
 ```
 algorithm.py                          the detector, OpenCV only
 demo.py                               local runner
-run.sh / setup.sh                     run locally / build + launch under ROS 2
+run.sh                                run locally (makes a venv)
+setup.sh / launch.sh                  build once / run under ROS 2
 pennair_ros2/video_publisher.py       node: video -> sensor_msgs/Image
 pennair_ros2/shape_detector.py        node: detect, publish results
 pennair_ros2/viewer.py                node: show /image_annotated
@@ -122,5 +124,5 @@ Same code as the grass video, no retuning. Three things make it background-indep
    not depend on the background at all.
 
 The one assumption is that objects are as smooth as or smoother than their background, which
-is reasonable given their uniform nature — a noisy or patterned object could just as validly
+is reasonable given their uniform nature. A noisy or patterned object could just as validly
 be split into several sub-objects.
