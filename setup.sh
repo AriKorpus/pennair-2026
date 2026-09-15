@@ -16,4 +16,3 @@ cd ~/ros2_ws
 colcon build --packages-select pennair_ros2
 source install/setup.bash
 [ -n "$VIDEO" ] && exec ros2 launch pennair_ros2 pennair.launch.py video:="$VIDEO"
-echo "source ~/ros2_ws/install/setup.bash && ros2 launch pennair_ros2 pennair.launch.py video:=..."

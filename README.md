@@ -11,7 +11,7 @@ Locally (no ROS)
 bash run.sh path/to/video10.mp4
 ```
 
-Under ROS 2 — builds, launches the two nodes plus a viewer window:
+Under ROS 2: builds, launches the two nodes plus a viewer window:
 
 ```bash
 bash setup.sh video10.mp4
@@ -33,6 +33,7 @@ demo.py                               local runner
 run.sh / setup.sh                     run locally / build + launch under ROS 2
 pennair_ros2/video_publisher.py       node: video -> sensor_msgs/Image
 pennair_ros2/shape_detector.py        node: detect, publish results
+pennair_ros2/viewer.py                node: show /image_annotated
 ```
 
 The pipeline was reached mostly by trial and error, each stage added against a failure on
