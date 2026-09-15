@@ -11,14 +11,15 @@ Locally (no ROS)
 bash run.sh path/to/video10.mp4
 ```
 
-Under ROS 2: three terminals
+Under ROS 2 — builds, launches the two nodes plus a viewer window:
 
 ```bash
-# 1: build and launch both nodes
 bash setup.sh video10.mp4
-# 2: watch the annotated video
-source ~/ros2_ws/install/setup.bash && rqt_image_view
-# 3: print the 3D centers
+```
+
+For the 3D numbers, in another terminal:
+
+```bash
 source ~/ros2_ws/install/setup.bash && ros2 topic echo /centers
 ```
 

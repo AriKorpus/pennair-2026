@@ -23,6 +23,7 @@ setup(
         "console_scripts": [
             "video_publisher = pennair_ros2.video_publisher:main",
             "shape_detector = pennair_ros2.shape_detector:main",
+            "viewer = pennair_ros2.viewer:main",
         ],
     },
 )

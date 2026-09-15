@@ -13,4 +13,5 @@ def generate_launch_description():
              parameters=[{'video': LaunchConfiguration('video'),
                           'width': LaunchConfiguration('width')}]),
         Node(package='pennair_ros2', executable='shape_detector', output='screen'),
+        Node(package='pennair_ros2', executable='viewer', output='screen'),
     ])
