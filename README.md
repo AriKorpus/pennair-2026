@@ -113,7 +113,7 @@ Same code as the grass video, no retuning. Three things make it background-indep
 
 1. Texture, not color, as the object cue. The detector assumes nothing about what the
    background looks like, only that an object surface is smoother than the background around
-   it. Grass and asphalt are both busy; the shapes read as calm on either.
+   it.
 
 2. Thresholds relative to each frame. The mask keeps pixels below a fraction of that frame's
    median texture, and the seam test compares against that frame's own outline contrast.
