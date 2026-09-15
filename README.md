@@ -1,4 +1,4 @@
-# PennAIR 2024 Software Challenge
+# PennAIR 2026 Software Challenge
 
 Detects shapes from a live video feed on any background, traces their outlines, marks their
 centers, and reports each center in 3D relative to the camera.
