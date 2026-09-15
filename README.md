@@ -111,7 +111,7 @@ Full resolution: [`results/dynamic_hard_result.mp4`](results/dynamic_hard_result
 
 Same code as the grass video, no retuning. Three things make it background-independent:
 
-1. Texture, not color, as the object cue. The detector assumes nothing about what the
+1. Texture, just not color, as the object cue. The detector assumes nothing about what the
    background looks like, only that an object surface is smoother than the background around
    it.
 
