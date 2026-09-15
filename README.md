@@ -5,13 +5,15 @@ centers, and reports each center in 3D relative to the camera.
 
 ## How to Run
 
-Locally (no ROS)
+Locally (no ROS) - requires Python3 with  `venv` on macOS or Linux system with internet access.
 
 ```bash
 bash run.sh path/to/video10.mp4
 ```
 
-Under ROS 2 — build once, then run any time (launches the two nodes plus a viewer window):
+Under ROS 2 — requires an Ubuntu 22.04, 24.04, or 26.04 system with 'sudo' and internet access.
+
+Build once, then run any time (launches the two nodes plus a viewer window):
 
 ```bash
 bash setup.sh                    # once: installs ROS 2 + deps if missing, builds the package
