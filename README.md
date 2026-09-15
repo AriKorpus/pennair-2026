@@ -89,7 +89,7 @@ pentagon/trapezoid pair, so we cut along the real color seam between them instea
 
 ## 3. Video Results
 
-https://github.com/user-attachments/assets/b0e2b782-a254-4623-9c8a-5b49668b6ef8
+https://github.com/user-attachments/assets/05642199-e0e0-4c9a-899f-35ceba06fe4b
 
 Full resolution: [`results/dynamic_result.mp4`](results/dynamic_result.mp4)
 
