@@ -120,7 +120,7 @@ Same code as the grass video, no retuning. Three things make it background-indep
    Changing the background just changes those numbers; the code stays the same.
 
 3. A high-pass before measuring texture, and color seams for overlaps. The high-pass makes a
-   gradient-filled shape read as smooth (this is what kept the film-grained white trapezoid
+   gradient-filled shape read as smooth (this is what kept white trapezoid
    as one piece), and the overlap cut keys on the color boundary between shapes, which does
    not depend on the background at all.
 
