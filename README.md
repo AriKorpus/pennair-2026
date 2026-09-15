@@ -103,7 +103,7 @@ edge map also runs at half resolution.
 
 ## 4. Background Agnostic Results
 
-https://github.com/user-attachments/assets/3c33b948-a68d-495f-99a4-1af62c57af2a
+https://github.com/user-attachments/assets/ad28a10f-28c6-4fec-a7ca-8d1c524828df
 
 Full resolution: [`results/dynamic_hard_result.mp4`](results/dynamic_hard_result.mp4)
 
