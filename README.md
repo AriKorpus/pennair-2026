@@ -67,7 +67,7 @@ camera frame), `/outlines` (`MarkerArray`), `/image_annotated` (`Image`).
 
 ![static](results/static_result.png)
 
-Two cues that fail in opposite situations. Texture separates object from background: a
+We use two cues that fail in opposite situations. Texture separates object from background: a
 uniform object surface carries less detail than a noisy background, so the two split even at
 the same color. Color edges separate object from object where one overlaps another, or where
 the background is smooth like the shapes.
