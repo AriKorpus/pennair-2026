@@ -95,8 +95,7 @@ pentagon/trapezoid pair, so we cut along the real color seam between them instea
 
 The overlaid fps is detection throughput — how many frames per second `detect()` processes,
 not a playback rate. It's the number that matters for a live feed: above the incoming 30 fps
-means the detector keeps up. It runs ~35 fps at 1080p on my MacBook (a touch lower here,
-since writing the output file competes for time). The main speedup was removing background
+means the detector keeps up. It runs ~35 fps at 1080p on my MacBook. The main speedup was removing background
 noise specks before dilation, which otherwise blow up the area watershed has to resolve; the
 edge map also runs at half resolution.
 
