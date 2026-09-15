@@ -63,7 +63,7 @@ camera frame), `/outlines` (`MarkerArray`), `/image_annotated` (`Image`).
 
 ## 2. Static Image Results
 
-![static](static_result.png)
+![static](results/static_result.png)
 
 Two cues that fail in opposite situations. Texture separates object from background: a
 uniform object surface carries less detail than a noisy background, so the two split even at
@@ -89,9 +89,9 @@ pentagon/trapezoid pair, so we cut along the real color seam between them instea
 
 ## 3. Video Results
 
-<video src="dynamic_result.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/b0e2b782-a254-4623-9c8a-5b49668b6ef8
 
-[`dynamic_result.mp4`](dynamic_result.mp4)
+Full resolution: [`results/dynamic_result.mp4`](results/dynamic_result.mp4)
 
 The overlaid fps is detection throughput — how many frames per second `detect()` processes,
 not a playback rate. It's the number that matters for a live feed: above the incoming 30 fps
@@ -103,9 +103,9 @@ edge map also runs at half resolution.
 
 ## 4. Background Agnostic Results
 
-<video src="dynamic_hard_result.mp4" controls width="100%"></video>
+https://github.com/user-attachments/assets/3c33b948-a68d-495f-99a4-1af62c57af2a
 
-[`dynamic_hard_result.mp4`](dynamic_hard_result.mp4)
+Full resolution: [`results/dynamic_hard_result.mp4`](results/dynamic_hard_result.mp4)
 
 Same code as the grass video, no retuning. Three things make it background-independent:
 
