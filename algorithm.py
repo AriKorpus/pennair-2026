@@ -1,4 +1,3 @@
-# Shape detection and 3D localisation. Plain OpenCV, no ROS.
 import cv2
 import numpy as np
 
@@ -24,7 +23,7 @@ GREEN, CYAN = (0, 255, 0), (255, 255, 0)
 
 
 def focal(width):
-    # Focal length is in pixels, so it scales if the frame is not the calibrated width.
+    # Focal length in pixels
     return CAMERA[0, 0] * width / CALIB_W, CAMERA[1, 1] * width / CALIB_W
 
 
@@ -36,7 +35,7 @@ def depth(found, fx):
     fill, area = max(((M["m00"] / (np.pi * cv2.minEnclosingCircle(c)[1] ** 2), M["m00"])
                       if whole else (0, 0) for c, M, whole in found), default=(0, 0))
     if fill >= ROUND:
-        DEPTH = fx * RADIUS / np.sqrt(area / np.pi)   # update the held value
+        DEPTH = fx * RADIUS / np.sqrt(area / np.pi)   
     return DEPTH
 
 
