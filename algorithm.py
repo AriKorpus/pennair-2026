@@ -17,7 +17,7 @@ CAMERA = np.array([[2564.3186869, 0, 0],     # camera intrinsics, as supplied
 CALIB_W = 1920     # width the intrinsics were calibrated at; focal length scales with it
 RADIUS = 10.0      # the circle's true radius, inches -- this is what sets the scale
 ROUND = 0.85       # fill fraction above which a contour is taken to be that circle
-DEPTH = 251.4      # fallback depth, inches, for frames with no circle in view
+DEPTH = 251.4      # last depth seen, inches; held for frames with no circle in view
 
 K = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
 GREEN, CYAN = (0, 255, 0), (255, 255, 0)
@@ -32,9 +32,12 @@ def depth(found, fx):
     # Distance to the ground, recovered from the circle, whose true radius we know. We
     # identify it as the contour that most completely fills its own enclosing circle, and
     # skip any touching the frame edge, since a clipped circle measures too small.
+    global DEPTH
     fill, area = max(((M["m00"] / (np.pi * cv2.minEnclosingCircle(c)[1] ** 2), M["m00"])
                       if whole else (0, 0) for c, M, whole in found), default=(0, 0))
-    return fx * RADIUS / np.sqrt(area / np.pi) if fill >= ROUND else DEPTH
+    if fill >= ROUND:
+        DEPTH = fx * RADIUS / np.sqrt(area / np.pi)   # update the held value
+    return DEPTH
 
 
 def detect(frame):
