@@ -72,7 +72,8 @@ uniform object surface carries less detail than a noisy background, so the two s
 the same color. Color edges separate object from object where one overlaps another, or where
 the background is smooth like the shapes.
 
-Depth uses the circle, whose real radius (10 in) we know. Things shrink with distance, so
+Depth uses the circle, which we detect by finding the shape that fills the largest proportion 
+of its smallest enclosing circle, whose real radius (10 in) we know. Things shrink with distance, so
 `Z = fx · R_inches / r_pixels`. `fx` is the focal length in pixels — it comes from the
 supplied camera matrix, scaled by how wide the frame is versus the calibration width. The
 flat ground puts every shape at that `Z`, and each center scales from pixels to inches by the
